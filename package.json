@@ -4,7 +4,7 @@
     "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat test",
     "deploy": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat run scripts/deploy.js --network rinkeby",
     "run": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat run scripts/sample-script.js",
-    "commit": "git add . && git commit -m ' "
+    "commit": "git add . && git cz "
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
