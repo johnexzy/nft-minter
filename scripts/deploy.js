@@ -7,13 +7,16 @@ const main = async () => {
     console.log("Contract deployed to: ", nftContract.address)
 
 
-    let trxn = await nftContract.makeAnNFT()
+    // let trxn = await nftContract.makeAnNFT()
 
-    await trxn.wait()
+    // await trxn.wait()
+    // for (let index = 0; index < 9; index++) {
+        
+    //     trxn = await nftContract.makeAnNFT()
 
-    trxn = await nftContract.makeAnNFT()
-
-    await trxn.wait()
+    //     await trxn.wait()
+    // }
+    
 }
 
 const runMain = async () => {
