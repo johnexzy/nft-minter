@@ -4,10 +4,12 @@
     "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat test",
     "deploy": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat run scripts/deploy.js --network rinkeby",
     "run": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx hardhat run scripts/run.js",
+    "verify": "cross-env NODE_OPTIONS=--openssl-legacy-provider  npx hardhat verify 0x5F41c6b7505b158199Ac66c8A88b8A56Ef16E310 --network rinkeby",
     "commit": "git add . && cz && git push"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.8",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "chai": "^4.3.4",
     "cross-env": "^7.0.3",

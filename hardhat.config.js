@@ -1,3 +1,4 @@
+require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config();
 require("@nomiclabs/hardhat-waffle");
 
@@ -18,7 +19,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.0",
   networks: {
     rinkeby: {
       url: process.env.STAGING_ALCHEMY_KEY,
@@ -32,5 +33,10 @@ module.exports = {
   },
   paths: {
     artifacts: "../mynft-ui/src/artifacts"
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "X497IWNIF5QX1KGXIS71JC7XZ6YG9WPZQF",
   }
 };

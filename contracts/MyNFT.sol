@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.4;
+pragma solidity ^0.8.0;
 
 // We need some util functions for strings.
 import "@openzeppelin/contracts/utils/Strings.sol";
@@ -52,7 +52,7 @@ contract MyNFT is ERC721URIStorage {
     string[] colors = ["red", "#08C2A8", "black", "yellow", "blue", "green"];
     event NewEpicNFTMinted(address sender, uint256 tokenId);
 
-    constructor() ERC721("JohnNFT", "Johnexzy") {
+    constructor() ERC721 ("JohnNFT", "JohnInWeb3") {
         console.log("This is my NFT contract. Woah!");
     }
 
