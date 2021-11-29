@@ -171,7 +171,23 @@ contract MyNFT is ERC721URIStorage {
         );
         emit NewEpicNFTMinted(msg.sender, newItemId);
     }
+    function mintNFT(string memory tokenCID) public {
+        uint256 newItemId = _tokenIds.current();
+        require(newItemId < 50, "All NFTs has been minted");
 
+        _safeMint(msg.sender, newItemId);
+
+        // Update your URI!!!
+        _setTokenURI(newItemId, tokenCID);
+
+        _tokenIds.increment();
+        console.log(
+            "An NFT w/ ID %s has been minted to %s",
+            newItemId,
+            msg.sender
+        );
+        emit NewEpicNFTMinted(msg.sender, newItemId);
+    }
     function getTotalMintCount() public view returns (uint256){
       return _tokenIds.current();
     }
